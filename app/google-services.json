@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "656742490010",
+    "project_id": "stick-it-to-em-f5a1f",
+    "storage_bucket": "stick-it-to-em-f5a1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656742490010:android:dd052ea1ac2c647a792423",
+        "android_client_info": {
+          "package_name": "edu.neu.madcourse.numad21s_stick_it_to_em_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656742490010-o9uu3fe0423g9sna8i80uml642jbifjs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6uJd6mouEUpcypM9885FAHgI1WaLoMlg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "656742490010-o9uu3fe0423g9sna8i80uml642jbifjs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
