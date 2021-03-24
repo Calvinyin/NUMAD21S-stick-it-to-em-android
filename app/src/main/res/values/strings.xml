@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NUMAD21S-stick-it-to-em-android</string>
+    <string name="display_textView">Click to send stickers</string>
 </resources>
