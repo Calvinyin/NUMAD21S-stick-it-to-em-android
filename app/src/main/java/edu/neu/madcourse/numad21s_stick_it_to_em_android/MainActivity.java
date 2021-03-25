@@ -25,6 +25,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.ArrayList;
@@ -100,14 +102,15 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(MainActivity.this, msg, Toast.LENGTH_LONG).show();
                                 }
                             });
+
                 } else {
                     User newUser = snapshot.getValue(User.class);
-                    newUser = user;
-                    displayTextView.setText("Number of stickers sent: " + user.sentStickers.size());
+                    user = newUser;
+//                    displayTextView.setText("Number of stickers sent: " + newUser.sentStickers.size());
                     // add predefined stickers to list view
-                    stickerList.addAll(predefinedSticker.getStickerMap().values());
-                    stickerAdapter.notifyDataSetChanged();
                 }
+                stickerList.addAll(predefinedSticker.getStickerMap().values());
+                stickerAdapter.notifyDataSetChanged();
             }
 
             @Override
