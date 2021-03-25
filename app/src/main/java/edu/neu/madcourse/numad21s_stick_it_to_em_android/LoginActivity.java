@@ -8,7 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 public class LoginActivity extends AppCompatActivity {
+    private static final String TAG = "LoginActivity";
+
     private Button loginButton;
     private EditText usernameEditText;
     private String username;
@@ -18,10 +21,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
         usernameEditText = (EditText) findViewById(R.id.editText_username);
         loginButton = findViewById(R.id.button_login);
         username = usernameEditText.getText().toString();
 
+        // navigate to the main activity when click login
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
