@@ -3,26 +3,29 @@ package edu.neu.madcourse.numad21s_stick_it_to_em_android.database.model;
 import java.util.ArrayList;
 
 public class User {
-    public String username;
+    public static final String PLACE_HOLDER_STICKER = "place_holder";
+
+    public String mUserName;
     public String email;
     public ArrayList<String> sentStickers;
     public ArrayList<String> receivedStickers;
 
-    public User() {
-        // Default constructor required for calls to DataSnapshot.getValue(User.class)
-    }
+    public User() {}
 
-    public User(String username) {
-        this.username = username;
+    public User(String userName) {
+        this.mUserName = userName;
         sentStickers = new ArrayList<>();
+        sentStickers.add(PLACE_HOLDER_STICKER);
         receivedStickers = new ArrayList<>();
+        receivedStickers.add(PLACE_HOLDER_STICKER);
     }
 
-    // another constructor for future use
-    public User(String username, String email) {
-        this.username = username;
+    public User(String userName, String email) {
+        this.mUserName = userName;
         this.email = email;
         sentStickers = new ArrayList<>();
+        sentStickers.add(PLACE_HOLDER_STICKER);
         receivedStickers = new ArrayList<>();
+        receivedStickers.add(PLACE_HOLDER_STICKER);
     }
 }

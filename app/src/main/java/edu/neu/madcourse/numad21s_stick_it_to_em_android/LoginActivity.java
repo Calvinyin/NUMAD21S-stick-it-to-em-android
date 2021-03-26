@@ -14,27 +14,27 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
 
-    private Button loginButton;
-    private EditText usernameEditText;
-    private String username;
+    private Button mLoginButton;
+    private EditText mUserNameEditText;
+    private String mUserName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        usernameEditText = (EditText) findViewById(R.id.editText_username);
+        mUserNameEditText = (EditText) findViewById(R.id.editText_username);
     }
 
     public void login(View view) {
-        loginButton = (Button)findViewById(R.id.button_login);
-        username = usernameEditText.getText().toString();
-        Log.d(TAG, "username = " + username);
+        mLoginButton = (Button)findViewById(R.id.button_login);
+        mUserName = mUserNameEditText.getText().toString();
+        Log.d(TAG, "username = " + mUserName);
 
-        if (username.equals(null) || username.length() == 0) {
+        if (mUserName.equals(null) || mUserName.length() == 0) {
             Toast.makeText(LoginActivity.this, "Please input a username!", Toast.LENGTH_LONG).show();
         } else {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            intent.putExtra("username", username);
+            intent.putExtra("userName", mUserName);
             startActivity(intent);
         }
     }

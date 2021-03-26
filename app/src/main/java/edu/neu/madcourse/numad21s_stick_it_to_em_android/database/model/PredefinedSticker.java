@@ -5,10 +5,11 @@ import java.util.Map;
 
 public class PredefinedSticker {
 
-    public Map<String, String> stickerMap;
-
     public PredefinedSticker() {
-        stickerMap = new HashMap<>();
+    }
+
+    public static Map<String, String> getStickerMap() {
+        Map<String, String> stickerMap = new HashMap<>();
 
         stickerMap.put("Grin", new String(Character.toChars(0x1F601)));
         stickerMap.put("TearOfJoy", new String(Character.toChars(0x1F602)));
@@ -16,9 +17,6 @@ public class PredefinedSticker {
         stickerMap.put("Heart", new String(Character.toChars(0x1F60D)));
         stickerMap.put("Sleepy", new String(Character.toChars(0x1F62A)));
         stickerMap.put("Dizzy", new String(Character.toChars(0x1F635)));
-    }
-
-    public Map<String, String> getStickerMap() {
         return stickerMap;
     }
 }
